@@ -20,4 +20,9 @@ class Formation extends Model
         'phare',
         'slug'
     ];
+
+    public function inscriptions()
+    {
+        return $this->hasMany(Inscription::class);
+    }
 }

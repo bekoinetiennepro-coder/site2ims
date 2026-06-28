@@ -26,12 +26,20 @@
 
     <ul class="space-y-3">
         <li>
-            <a href="/admin/dashboard">Dashboard</a>
+            <a href="{{ route('admin.dashboard') }}">
+                📊 Dashboard
+            </a>
         </li>
 
         <li>
             <a href="{{ route('admin.formations.index') }}">
-                Formations
+                🎓 Formations
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('admin.inscriptions.index') }}">
+                📝 Inscriptions
             </a>
         </li>
     </ul>

@@ -158,9 +158,15 @@
                 Inscription
             </h3>
 
-            <form method="POST" action="#">
+            <form method="POST"action="{{ route('inscriptions.store') }}">
 
-                @csrf
+              @csrf
+
+                <input type="hidden"
+                    name="formation_id"
+                 value="{{ $formation->id }}">
+
+        
 
                 <div class="mb-4">
 
@@ -175,81 +181,124 @@
 
                 </div>
 
-                <div class="mb-4">
+                <<div class="mb-4">
 
-                    <label class="block mb-2">
-                        Nom et Prénoms
+                    <label class="font-medium">
+                        Type d'inscription
                     </label>
+
+                    <select id="type"
+                            name="type"
+                            class="w-full border rounded-lg p-3">
+
+                        <option value="Particulier">
+                            Particulier
+                        </option>
+
+                        <option value="Entreprise">
+                            Entreprise
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div id="particulier">
 
                     <input type="text"
-                           name="nom"
-                           class="w-full border rounded-lg px-4 py-3">
-
-                </div>
-
-                <div class="mb-4">
-
-                    <label class="block mb-2">
-                        Téléphone
-                    </label>
+                        name="nom"
+                        placeholder="Nom"
+                        class="w-full border rounded-lg p-3 mb-3">
 
                     <input type="text"
-                           name="telephone"
-                           class="w-full border rounded-lg px-4 py-3">
-
-                </div>
-
-                <div class="mb-4">
-
-                    <label class="block mb-2">
-                        Email
-                    </label>
-
-                    <input type="email"
-                           name="email"
-                           class="w-full border rounded-lg px-4 py-3">
-
-                </div>
-
-                <div class="mb-4">
-
-                    <label class="block mb-2">
-                        Entreprise
-                    </label>
+                        name="prenoms"
+                        placeholder="Prénoms"
+                        class="w-full border rounded-lg p-3 mb-3">
 
                     <input type="text"
-                           name="entreprise"
-                           class="w-full border rounded-lg px-4 py-3">
+                        name="fonction"
+                        placeholder="Fonction"
+                        class="w-full border rounded-lg p-3 mb-3">
 
                 </div>
 
-                <div class="mb-6">
+                <div id="entreprise" style="display:none">
 
-                    <label class="block mb-2">
-                        Message
-                    </label>
+                    <input type="text"
+                        name="entreprise"
+                        placeholder="Nom de l'entreprise"
+                        class="w-full border rounded-lg p-3 mb-3">
 
-                    <textarea name="message"
-                              rows="4"
-                              class="w-full border rounded-lg px-4 py-3"></textarea>
+                    <input type="text"
+                        name="libelle"
+                        placeholder="Nom du responsable"
+                        class="w-full border rounded-lg p-3 mb-3">
+
+                    <input type="number"
+                        name="nb_personnes"
+                        placeholder="Nombre de personnes à former"
+                        class="w-full border rounded-lg p-3 mb-3">
 
                 </div>
 
-                <button type="submit"
-                        class="w-full bg-primary text-white py-3 rounded-lg hover:opacity-90">
+                <input type="text"
+                    name="telephone"
+                    placeholder="Téléphone"
+                    class="w-full border rounded-lg p-3 mb-3">
 
-                    🚀 Je m'inscris
+                <input type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="w-full border rounded-lg p-3 mb-3">
 
+                <textarea
+                    name="message"
+                    class="w-full border rounded-lg p-3 mb-3"
+                    rows="4"
+                    placeholder="Message"></textarea>
+
+                <button
+                    type="submit"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                    Envoyer
                 </button>
 
             </form>
+
+            <script>
+
+                const type = document.getElementById('type');
+
+                const particulier =
+                    document.getElementById('particulier');
+
+                const entreprise =
+                    document.getElementById('entreprise');
+
+                type.addEventListener('change', function(){
+
+                    if(this.value === 'Entreprise')
+                    {
+                        particulier.style.display = 'none';
+                        entreprise.style.display = 'block';
+                    }
+                    else
+                    {
+                        particulier.style.display = 'block';
+                        entreprise.style.display = 'none';
+                    }
+
+                });
+
+            </script>    
+
 
         </div>
 
     </div>
 
 </div>
-```
+
 
 </section>
 

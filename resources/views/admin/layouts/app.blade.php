@@ -42,6 +42,12 @@
                 📝 Inscriptions
             </a>
         </li>
+
+        <li>
+            <a href="{{ route('admin.users.index') }}">
+               👥 Utilisateurs
+            </a>
+        </li>
     </ul>
 
 </aside>

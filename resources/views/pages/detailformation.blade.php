@@ -8,7 +8,7 @@
 
 <section class="relative">
 
-```
+
 <div class="h-[450px] bg-cover bg-center"
      style="background-image:url('{{ asset('storage/'.$formation->image) }}')">
 
@@ -43,7 +43,7 @@
     </div>
 
 </div>
-```
+
 
 </section>
 
@@ -51,7 +51,7 @@
 
 <section class="max-w-screen-xl mx-auto px-6 py-16">
 
-```
+
 <div class="grid lg:grid-cols-3 gap-10">
 
     <!-- Partie gauche -->
@@ -181,7 +181,7 @@
 
                 </div>
 
-                <<div class="mb-4">
+                <div class="mb-4">
 
                     <label class="font-medium">
                         Type d'inscription

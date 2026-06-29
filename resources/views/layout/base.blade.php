@@ -137,18 +137,18 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 </script> --}}
 <body class="bg-background text-on-surface">
 <!-- Navigation Shell -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface dark:bg-surface-container shadow-sm">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface shadow-sm">
 <div class="max-w-screen-2xl mx-auto px-margin-desktop flex justify-between items-center h-20">
 <div class="flex items-center gap-base">
-<img alt="2IMS Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuy4qT1tvXM3Wpm_vYUbAM_CjkZLVOeHsogMOT2IoXV7tlyDhJzKkZzB6iyXDxdEHWb6yY2uq4n3j5fQE06R7ULfwK1LU73rJUdRIPYmVjAxgvpAPI5zDJF2v9YvjA8nWDYdDyEzvojURCn03uFdNoq_FnfupNUi-HEhMkI06gxjxFQhUa291aUhY8U-jRFwr0WZK70WZhC-b3-E8jmJUjnbiJQEscjMPARDWIwt2E5O4p3y7o7W10XgQ"/>
-<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">2IMS</span>
+<img alt="2IMS Logo" class="h-10 w-auto" src="{{ asset('images/logo.jpg') }}"/>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">2IMS</span>
 </div>
 <div class="hidden md:flex gap-lg">
-<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 cursor-pointer transition-all active:scale-95" href="/">ACCUEIL</a>
-<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all active:scale-95" href="/propos">À PROPOS</a>
-<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all active:scale-95" href="/service">SERVICES</a>
-<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
-<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/">ACCUEIL</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/propos">À PROPOS</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/service">SERVICES</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
 </div>
 <button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all cursor-pointer">
                 DEVIS
@@ -161,10 +161,10 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
     @yield('content')
 
 
-<footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container">
+<footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-on-primary">
 <div class="md:col-span-1">
 <div class="flex items-center gap-xs mb-md">
-<img alt="2IMS Footer Logo" class="h-8 w-auto brightness-200" src="https://lh3.googleusercontent.com/aida/AP1WRLuy4qT1tvXM3Wpm_vYUbAM_CjkZLVOeHsogMOT2IoXV7tlyDhJzKkZzB6iyXDxdEHWb6yY2uq4n3j5fQE06R7ULfwK1LU73rJUdRIPYmVjAxgvpAPI5zDJF2v9YvjA8nWDYdDyEzvojURCn03uFdNoq_FnfupNUi-HEhMkI06gxjxFQhUa291aUhY8U-jRFwr0WZK70WZhC-b3-E8jmJUjnbiJQEscjMPARDWIwt2E5O4p3y7o7W10XgQ"/>
+<img alt="2IMS Footer Logo" class="h-8 w-auto brightness-200" src="{{ asset('images/logo.jpg') }}"/>
 <span class="font-headline-sm text-headline-sm font-bold">2IMS</span>
 </div>
 <p class="font-body-md text-body-md opacity-80">

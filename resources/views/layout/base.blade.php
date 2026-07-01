@@ -150,9 +150,18 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 <a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
 <a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
 </div>
-<button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all cursor-pointer">
-                DEVIS
-            </button>
+
+    <a href="{{ route('rendezvous.create') }}"
+       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+
+        <span class="material-symbols-outlined text-[20px]">
+            event
+        </span>
+
+        Prendre rendez-vous
+
+    </a>
+
 </div>
 </nav>
 

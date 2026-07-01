@@ -132,9 +132,17 @@
         <p class="font-body-lg text-body-lg text-on-primary-container mb-lg max-w-2xl mx-auto">
                                     Discutez de votre projet avec nos experts et découvrez comment nous pouvons transformer vos défis techniques en opportunités de croissance.
                                 </p>
-        <button class="bg-surface text-primary px-xl py-4 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-all active:scale-95 inline-flex items-center gap-base">
-                                    Prendre rendez-vous <span class="material-symbols-outlined">event</span>
-        </button>
+        <a href="{{ route('rendezvous.create') }}"
+            class="bg-surface text-primary px-xl py-4 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-all active:scale-95 inline-flex items-center gap-base">
+
+                Prendre rendez-vous
+
+                <span class="material-symbols-outlined">
+                    event
+                </span>
+
+        </a>
+        
         </div>
         </div>
         </div>

@@ -6,7 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\RendezVousController;
 /*
 |--------------------------------------------------------------------------
 | SITE PUBLIC
@@ -39,6 +39,17 @@ Route::post('/inscriptions',
     [InscriptionController::class, 'store']
 )->name('inscriptions.store');
 
+
+Route::get(
+    '/rendez-vous',
+    [RendezVousController::class,'create']
+)->name('rendezvous.create');
+
+
+Route::post(
+    '/rendez-vous',
+    [RendezVousController::class,'store']
+)->name('rendezvous.store');
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +92,21 @@ Route::middleware([
         'users',
         UserController::class
     );
+
+    Route::resource(
+        'rendezvous',
+        RendezVousController::class
+    );
+
+    Route::patch(
+            'rendezvous/{rendezvous}/confirmer',
+            [RendezVousController::class,'confirmer']
+        )->name('rendezvous.confirmer');
+
+    Route::patch(
+            'rendezvous/{rendezvous}/annuler',
+            [RendezVousController::class,'annuler']
+        )->name('rendezvous.annuler');
 
 });
 

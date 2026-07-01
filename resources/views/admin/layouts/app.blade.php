@@ -48,6 +48,12 @@
                👥 Utilisateurs
             </a>
         </li>
+
+        <li>
+            <a href="{{ route('admin.rendezvous.index') }}">
+                📅 Rendez-vous
+            </a>
+        </li>
     </ul>
 
 </aside>

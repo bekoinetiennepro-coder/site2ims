@@ -9,53 +9,53 @@
         <!-- Hero Section -->
     <section class="relative min-h-[85vh] flex items-center hero-pattern overflow-hidden">
         <div class="max-w-screen-2xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center py-xl">
-        <div class="z-10" data-aos="fade-up">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-md">
+            <div class="z-10" data-aos="fade-up">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-md">
                                 EXPERT EN INFRASTRUCTURE IT
-                            </span>
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-md leading-tight">
+                </span>
+                 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-md leading-tight">
                                 Optimisez votre Infrastructure,<br/>
-        <span class="text-on-primary-container">Propulsez votre Vision</span>
-        </h1>
-        <p class="font-body-lg text-body-lg text-secondary mb-lg max-w-xl">
-                                Expertise pointue en conseil, audit et solutions de pointe pour moderniser votre système d'information et sécuriser vos données critiques.
-                            </p>
-        <div class="flex flex-wrap gap-md">
-        <button class="bg-primary-container text-on-primary px-lg py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
-                                    Nos Services <span class="material-symbols-outlined">arrow_forward</span>
-        </button>
-        <button class="border border-outline text-primary px-lg py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">
-                                    Consulter un expert
-                                </button>
-        </div>
-        </div>
-        <div class="relative hidden md:block">
-        <div class="w-full aspect-square rounded-xl shadow-2xl relative z-10 overflow-hidden" data-alt="A professional high-tech server room background with glowing blue LED lights reflecting on polished surfaces. In the foreground, a sleek transparent glass interface displays complex network maps and data visualizations. The lighting is sophisticated and moody, emphasizing technical precision and corporate reliability with deep blues and crisp whites." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-cDwYrAFv6BElix4CwKbgRn04rffF2OUjaDi4pSAFa57Ffe8nuo-NkE4b7ku5hyiBpkGXGYiJaxTHDDpkkFr-lMVXRDLFFoz5YC9XaYfdXl-KeIOPxIbh9zGHVvR86LCSQZJho9WcJqRx76JFwjcLZgGhje9xNeYjKpHdkLZAiz7UbHh1TERfaArcCcMU_yvhn09ZB5KEiKSkPARPurn4Shd8TmU7uPwm4cTR_6R00bV48xcJnZmRr0owmEsCuCUeRMoWEx_2ChU')">
-        </div>
-        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-fixed opacity-20 blur-3xl rounded-full"></div>
-        <div class="absolute -top-10 -right-10 w-48 h-48 bg-secondary-fixed opacity-30 blur-2xl rounded-full"></div>
-        </div>
+                    <span class="text-on-primary-container">Propulsez votre Vision</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-secondary mb-lg max-w-xl">
+                    Expertise pointue en conseil, audit et solutions de pointe pour moderniser votre système d'information et sécuriser vos données critiques.
+                </p>
+                <div class="flex flex-wrap gap-md">
+                     <button class="bg-primary-container text-on-primary px-lg py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                        Nos Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button class="border border-outline text-primary px-lg py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">
+                        Consulter un expert
+                    </button>
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                 <div class="w-full aspect-square rounded-xl shadow-2xl relative z-10 overflow-hidden" data-alt="A professional high-tech server room background with glowing blue LED lights reflecting on polished surfaces. In the foreground, a sleek transparent glass interface displays complex network maps and data visualizations. The lighting is sophisticated and moody, emphasizing technical precision and corporate reliability with deep blues and crisp whites." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-cDwYrAFv6BElix4CwKbgRn04rffF2OUjaDi4pSAFa57Ffe8nuo-NkE4b7ku5hyiBpkGXGYiJaxTHDDpkkFr-lMVXRDLFFoz5YC9XaYfdXl-KeIOPxIbh9zGHVvR86LCSQZJho9WcJqRx76JFwjcLZgGhje9xNeYjKpHdkLZAiz7UbHh1TERfaArcCcMU_yvhn09ZB5KEiKSkPARPurn4Shd8TmU7uPwm4cTR_6R00bV48xcJnZmRr0owmEsCuCUeRMoWEx_2ChU')">
+            </div>
+            <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-fixed opacity-20 blur-3xl rounded-full"></div>
+            <div class="absolute -top-10 -right-10 w-48 h-48 bg-secondary-fixed opacity-30 blur-2xl rounded-full"></div>
+            </div>
         </div>
     </section>
     <!-- Stats Section -->
     <section class="bg-primary py-lg">
         <div class="max-w-screen-2xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-        <div class="flex flex-col items-center">
-        <span class="font-display-lg text-display-lg text-on-primary mb-xs">150+</span>
-        <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Projets Réalisés</span>
-        </div>
-        <div class="flex flex-col items-center">
-        <span class="font-display-lg text-display-lg text-on-primary mb-xs">12+</span>
-        <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Ans d'Expertise</span>
-        </div>
-        <div class="flex flex-col items-center">
-        <span class="font-display-lg text-display-lg text-on-primary mb-xs">50+</span>
-        <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Partenaires Certifiés</span>
-        </div>
-        <div class="flex flex-col items-center">
-        <span class="font-display-lg text-display-lg text-on-primary mb-xs">24/7</span>
-        <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Support Technique</span>
-        </div>
+            <div class="flex flex-col items-center">
+                <span class="font-display-lg text-display-lg text-on-primary mb-xs">150+</span>
+                <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Projets Réalisés</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="font-display-lg text-display-lg text-on-primary mb-xs">12+</span>
+                <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Ans d'Expertise</span>
+            </div>
+                <div class="flex flex-col items-center">
+                <span class="font-display-lg text-display-lg text-on-primary mb-xs">50+</span>
+                <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Partenaires Certifiés</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="font-display-lg text-display-lg text-on-primary mb-xs">24/7</span>
+                <span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Support Technique</span>
+            </div>
         </div>
     </section>
     <!-- Services Grid Section -->

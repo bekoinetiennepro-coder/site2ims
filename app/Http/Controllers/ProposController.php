@@ -4,9 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Propos;
 use Illuminate\Http\Request;
+use App\Models\Equipe;
 
 class ProposController extends Controller
 {
+
+
+
+    public function accueil()
+    {
+        $equipes = Equipe::where(
+            'actif',
+            true
+        )
+        ->orderBy('ordre')
+        ->get();
+
+        return view(
+            'pages.propos',
+            compact('equipes')
+        );
+    }
     /**
      * Display a listing of the resource.
      */

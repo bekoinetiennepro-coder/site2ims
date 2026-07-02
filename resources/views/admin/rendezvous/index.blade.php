@@ -83,7 +83,7 @@
 
             <table class="w-full">
 
-                <thead class="bg-gray-50">
+                <thead class="bg-slate-800 text-white">
 
                     <tr>
 

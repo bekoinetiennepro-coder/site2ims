@@ -44,8 +44,8 @@ use Illuminate\Support\Str;
 
     <table class="w-full text-sm text-left">
 
-        <thead>
-            <tr class="bg-gray-100 text-gray-700 uppercase text-xs">
+        <thead class="bg-slate-800 text-white">
+            <tr>
 
                 <th class="px-6 py-4">Image</th>
                 <th class="px-6 py-4">Titre</th>

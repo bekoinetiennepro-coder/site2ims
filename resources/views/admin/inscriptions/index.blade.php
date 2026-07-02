@@ -100,7 +100,7 @@
 
     <table class="w-full">
 
-        <thead class="bg-gray-100">
+        <thead class="bg-slate-800 text-white">
 
             <tr>
 

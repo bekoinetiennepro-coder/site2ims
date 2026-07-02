@@ -54,6 +54,12 @@
                 📅 Rendez-vous
             </a>
         </li>
+
+        <li>
+            <a href="{{ route('admin.equipes.index') }}">
+              👥  Equipe
+            </a>
+        </li>
     </ul>
 
 </aside>

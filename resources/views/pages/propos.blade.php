@@ -64,80 +64,89 @@
 </section>
 <!-- Experts Team Section -->
 <section class="py-xl bg-background">
-<div class="max-w-screen-2xl mx-auto px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md scroll-reveal">
-<div>
-<h2 class="font-headline-md text-headline-md text-primary">Une Équipe d'Experts</h2>
-<p class="font-body-lg text-body-lg text-secondary max-w-xl">La force de 2IMS réside dans la complémentarité de nos talents, alliant expertise technique pointue et vision stratégique.</p>
-</div>
-<div class="flex gap-sm">
-<button class="p-base border border-outline rounded-full hover:bg-surface transition-colors cursor-pointer active:scale-95">
-<span class="material-symbols-outlined">arrow_back</span>
-</button>
-<button class="p-base bg-primary text-on-primary rounded-full hover:opacity-90 transition-colors cursor-pointer active:scale-95">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Team Member 1 -->
-<div class="group scroll-reveal" style="transition-delay: 50ms;">
-<div class="relative overflow-hidden rounded-xl mb-md h-[400px]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional corporate headshot of a senior IT architect, mid-40s, confident smile, wearing a modern navy suit. Studio lighting, soft grey background, high-end commercial photography style. Deep primary blue and soft white tones reflecting a corporate technical precision aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvN2GY_i7YPaMZE2M4_V2G2bUciHRcJPWRfPe-JJslo6CyRoxxKIuNGKx87fsQNRtZ2XguqifhSUGI9zqnTEoo7k9UPhv732nZRp8XugbcKsl4NccqLZ7VM1x_ljxG6_9JMBliqF9dmgq_f5cHblCvmnmwBitBbtHXodrpGkVX-djOPehj0q9-poFE707ibBLXmCYYq7DMD3WVXAOnLSrhddTq6YLXnBr7q3ViW8BkhH42Hh5sWol_7-C-Z34-7ly7qwTduH15H-M"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
-<div class="flex gap-sm text-white">
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">link</span>
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">mail</span>
-</div>
-</div>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Jean Dupont</h4>
-<p class="font-label-md text-label-md text-secondary">Chief Technology Officer</p>
-</div>
-<!-- Team Member 2 -->
-<div class="group scroll-reveal" style="transition-delay: 150ms;">
-<div class="relative overflow-hidden rounded-xl mb-md h-[400px]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A portrait of a female cybersecurity expert, early 30s, professional attire, smart glasses, sophisticated office environment in background. Focused and intelligent expression. Clean lighting, modern minimalist aesthetic with hints of slate blue and clinical white colors. Corporate excellence portraiture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZGZ3xRQgtGLnUc-gwrmUz0mh4bHbOi6SlUd8EF9cHUN_FCoZjCMaFvSfAqgD4JLMlj4s-yw2pamDZm98Hn-1IHKa07Fc6TVpBY0EMDrZbgKUw9oT_MLreAcgFaws3ClL4lpuV5ygQWWvDpwrxfpYCMBEOH8CbkQt2DVw7extp4dcKKx4ur6nPqeNnbyf9TdHANZHm5kRzG00NeTHApZrN178YjIDOSkURZK_rAt8r-V1NYlyiaV5F4doRk5kMofm6xoyqbWsipY"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
-<div class="flex gap-sm text-white">
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">link</span>
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">mail</span>
-</div>
-</div>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Marie Leroux</h4>
-<p class="font-label-md text-label-md text-secondary">Directrice Cybersécurité</p>
-</div>
-<!-- Team Member 3 -->
-<div class="group scroll-reveal" style="transition-delay: 250ms;">
-<div class="relative overflow-hidden rounded-xl mb-md h-[400px]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A portrait of a male cloud infrastructure engineer, late 30s, casual professional style, warm and approachable expression. Modern bright workspace background. Cinematic lighting, soft depth of field, high resolution corporate photography focusing on themes of reliability and expertise. Palette of clean whites and dark navy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1AWVxr2FmYI4Ld0Lbj61XqkrWloMI_VELLivusKW9P6qCUvudy_FgcbSlWuI1udZrN02cnf1sqY6RxYh1ydbqStodl2MLVO8KwUahVeX1MYTGwKrnzW2JpljqlV9fO23L0KCMVcLYwNfsmVaZs2-WYZapsjfOfBNn_dYTLyMqJ2hIRfyQ7gwE98cuSeCikpCqS_MjvLCYrU9vainG3Oq58LUMX0Hu6WRrO5RjTSpMwQIaCBtVH8xK7yzCbuQxZJZvS_Ly22_ha8c"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
-<div class="flex gap-sm text-white">
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">link</span>
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">mail</span>
-</div>
-</div>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Thomas Bazin</h4>
-<p class="font-label-md text-label-md text-secondary">Lead Cloud Solutions</p>
-</div>
-<!-- Team Member 4 -->
-<div class="group scroll-reveal" style="transition-delay: 350ms;">
-<div class="relative overflow-hidden rounded-xl mb-md h-[400px]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a female digital strategy consultant, mid-30s, poised and visionary look. Modern minimalist studio background. Professional corporate lighting with a focus on clarity and authority. Color palette features deep blacks and vibrant white contrasts. Sharp focus, high fashion business photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRU3K--ovMomlfpyvGXXC3nJ3JK1ps1yJ-w2mqemSBiKaUt5JWSyQYHVwMMh_yP1nOX6Me00mDf83E1TPWiyo7OYXAdVZYX5J6z0pDk5zyRR-LlYwM2ERZZo5TDEKt6r_6y_VsNrxOhpCam9qHh3J3noxLcUN4XO06iUv_gm0iXp8dBkboP35eaELZ8vC6TUxPTDRH1jsy1fXdEd6bs_MY2IBt6qeX5gGIQgYvtxI2IDhsdWIyMZyzYX-ixudIBiPBmtIVQjhkzeA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
-<div class="flex gap-sm text-white">
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">link</span>
-<span class="material-symbols-outlined text-body-md cursor-pointer hover:text-primary-fixed-dim">mail</span>
-</div>
-</div>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Sarah Kamara</h4>
-<p class="font-label-md text-label-md text-secondary">Consultante Stratégie Digitale</p>
-</div>
-</div>
-</div>
+
+    <div class="max-w-screen-2xl mx-auto px-margin-desktop">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+
+            <div>
+
+                <h2 class="font-headline-md text-headline-md text-primary">
+                    Une Équipe d'Experts
+                </h2>
+
+                <p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                    La force de 2IMS réside dans la complémentarité de nos talents.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+
+            @foreach($equipes as $membre)
+
+                <div class="group">
+
+                    <div class="relative overflow-hidden rounded-xl mb-md h-[350px]">
+
+                        <img
+                            src="{{ asset('storage/'.$membre->photo) }}"
+                            alt="{{ $membre->nom }}"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
+
+                            <div class="flex gap-sm text-white">
+
+                                @if($membre->linkedin)
+
+                                    <a href="{{ $membre->linkedin }}"
+                                       target="_blank">
+
+                                        <span class="material-symbols-outlined">
+                                            link
+                                        </span>
+
+                                    </a>
+
+                                @endif
+
+                                @if($membre->email)
+
+                                    <a href="mailto:{{ $membre->email }}">
+
+                                        <span class="material-symbols-outlined">
+                                            mail
+                                        </span>
+
+                                    </a>
+
+                                @endif
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h4 class="font-headline-sm text-headline-sm text-primary">
+                        {{ $membre->nom }}
+                    </h4>
+
+                    <p class="font-label-md text-label-md text-secondary">
+                        {{ $membre->poste }}
+                    </p>
+
+                </div>
+
+            @endforeach
+
+        </div>
+
+    </div>
+
 </section>
 <!-- CTA Section -->
 <section class="py-xl">

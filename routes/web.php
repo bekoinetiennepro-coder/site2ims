@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RendezVousController;
+
 /*
 |--------------------------------------------------------------------------
 | SITE PUBLIC
@@ -27,8 +29,19 @@ Route::get('/service', function () {
     return view('pages.service');
 });
 
+use App\Models\Equipe;
+
 Route::get('/propos', function () {
-    return view('pages.propos');
+
+    $equipes = Equipe::where('actif', 1)
+        ->orderBy('ordre')
+        ->get();
+
+    return view(
+        'pages.propos',
+        compact('equipes')
+    );
+
 });
 
 Route::get('/contact', function () {
@@ -107,6 +120,12 @@ Route::middleware([
             'rendezvous/{rendezvous}/annuler',
             [RendezVousController::class,'annuler']
         )->name('rendezvous.annuler');
+
+
+    Route::resource(
+        'equipes',
+        EquipeController::class
+    );
 
 });
 

@@ -66,9 +66,14 @@ class InscriptionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Inscription $inscription)
+   public function show($id)
     {
-        //
+        $inscription = Inscription::findOrFail($id);
+
+        return view(
+            'admin.inscriptions.show',
+            compact('inscription')
+        );
     }
 
     /**

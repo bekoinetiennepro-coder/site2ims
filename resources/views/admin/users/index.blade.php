@@ -41,9 +41,9 @@
 
         <table class="w-full">
 
-            <thead>
+            <thead class="bg-slate-800 text-white">
 
-                <tr class="bg-gray-100 text-left">
+                <tr>
 
                     <th class="p-4">Nom</th>
                     <th class="p-4">Email</th>

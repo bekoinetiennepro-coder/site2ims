@@ -60,6 +60,11 @@
               👥  Equipe
             </a>
         </li>
+
+        <li>
+            <a href="{{ route('admin.services.index') }}">
+                🛠️ Services
+            </a>
     </ul>
 
 </aside>

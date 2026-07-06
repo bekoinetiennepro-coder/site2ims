@@ -29,7 +29,7 @@
             <div class="flex flex-wrap gap-6 text-lg">
 
                 <span>
-                    ⏱ {{ $formation->duree }} jours
+                    ⏱ {{ $formation->duree }} heures
                 </span>
 
                 <span>
@@ -114,7 +114,7 @@
 
                 <li class="flex justify-between">
                     <span>Durée</span>
-                    <strong>{{ $formation->duree }} jours</strong>
+                    <strong>{{ $formation->duree }} heures</strong>
                 </li>
 
                 <li class="flex justify-between">

@@ -137,82 +137,85 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 </script> --}}
 <body class="bg-background text-on-surface">
 <!-- Navigation Shell -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface shadow-sm">
-<div class="max-w-screen-2xl mx-auto px-margin-desktop flex justify-between items-center h-20">
-<div class="flex items-center gap-base">
-<img alt="2IMS Logo" class="h-10 w-auto" src="{{ asset('images/logo.jpg') }}"/>
-<span class="font-headline-sm text-headline-sm font-bold text-primary">2IMS</span>
-</div>
-<div class="hidden md:flex gap-lg">
-<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/">ACCUEIL</a>
-<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/propos">À PROPOS</a>
-<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/service">SERVICES</a>
-<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
-<a class="font-label-md text-label-md text-secondary hover:text-primary cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
-</div>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm">
+        <div class="max-w-screen-2xl mx-auto px-margin-desktop flex justify-between items-center h-20">
+            <div class="flex items-center gap-base">
+                <img alt="2IMS Logo" class="h-10 w-auto" src="{{ asset('images/logo.jpg') }}"/>
 
-    <a href="{{ route('rendezvous.create') }}"
-       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+            </div>
+            <div class="hidden md:flex gap-lg">
+                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/">ACCUEIL</a>
+                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/propos">À PROPOS</a>
+                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95"
+                     href="/#services">
+                    SERVICES
+                </a>
+                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
+                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
+            </div>
 
-        <span class="material-symbols-outlined text-[20px]">
-            event
-        </span>
+            <a href="{{ route('rendezvous.create') }}"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-700 text-white font-medium hover:bg-blue-700 transition">
 
-        Prendre rendez-vous
+                <span class="material-symbols-outlined text-[20px]">
+                    event
+                </span>
 
-    </a>
+                Prendre rendez-vous
 
-</div>
-</nav>
+            </a>
+
+        </div>
+    </nav>
 
 
 
     @yield('content')
 
 
-<footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-on-primary">
-<div class="md:col-span-1">
-<div class="flex items-center gap-xs mb-md">
-<img alt="2IMS Footer Logo" class="h-8 w-auto brightness-200" src="{{ asset('images/logo.jpg') }}"/>
-<span class="font-headline-sm text-headline-sm font-bold">2IMS</span>
-</div>
-<p class="font-body-md text-body-md opacity-80">
+    <footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-on-primary">
+        <div class="md:col-span-1">
+            <div class="flex items-center gap-xs mb-md">
+                <img alt="2IMS Footer Logo" class="h-8 w-auto brightness-200" src="{{ asset('images/logo.jpg') }}"/>
+                <span class="font-headline-sm text-headline-sm font-bold">2IMS</span>
+            </div>
+            <p class="font-body-md text-body-md opacity-80">
                 Votre partenaire de confiance pour une infrastructure informatique résiliente et innovante.
-            </p>
-</div>
-<div>
-<h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Expertise</h4>
-<ul class="space-y-sm font-body-md text-body-md">
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Audit &amp; Conseil</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cybersécurité</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cloud &amp; DevOps</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Base de données</li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Ressources</h4>
-<ul class="space-y-sm font-body-md text-body-md">
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Support Technique</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Plan du site</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Confidentialité</li>
-<li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Mentions Légales</li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Newsletter</h4>
-<p class="font-body-md text-body-md mb-md opacity-80">Restez informé de nos actualités.</p>
-<div class="flex">
-<input class="bg-on-primary/10 border-none rounded-l-lg p-2 text-on-primary placeholder:text-on-primary/50 focus:ring-1 focus:ring-on-primary w-full" placeholder="Votre email" type="email"/>
-<button class="bg-surface text-primary p-2 rounded-r-lg hover:bg-primary-fixed transition-colors">
-<span class="material-symbols-outlined">send</span>
-</button>
-</div>
-</div>
-<div class="md:col-span-4 pt-lg mt-lg border-t border-on-primary/10 text-center font-body-md text-body-md opacity-60">
-            © 2024 2IMS. Tous droits réservés. Expertise IT &amp; Solutions Digitales.
+             </p>
         </div>
-</footer>
-<script>
+        <div>
+            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Expertise</h4>
+            <ul class="space-y-sm font-body-md text-body-md">
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Audit &amp; Conseil</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cybersécurité</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cloud &amp; DevOps</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Base de données</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Ressources</h4>
+            <ul class="space-y-sm font-body-md text-body-md">
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Support Technique</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Plan du site</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Confidentialité</li>
+            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Mentions Légales</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Newsletter</h4>
+            <p class="font-body-md text-body-md mb-md opacity-80">Restez informé de nos actualités.</p>
+            <div class="flex">
+                <input class="bg-on-primary/10 border-none rounded-l-lg p-2 text-on-primary placeholder:text-on-primary/50 focus:ring-1 focus:ring-on-primary w-full" placeholder="Votre email" type="email"/>
+                <button class="bg-surface text-primary p-2 rounded-r-lg hover:bg-primary-fixed transition-colors">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </div>
+        </div>
+        <div class="md:col-span-4 pt-lg mt-lg border-t border-on-primary/10 text-center font-body-md text-body-md opacity-60">
+                © 2024 2IMS. Tous droits réservés. Expertise IT &amp; Solutions Digitales.
+        </div>
+    </footer>
+    <script>
         // Micro-interaction for cards
         document.querySelectorAll('.group').forEach(card => {
             card.addEventListener('mouseenter', () => {
@@ -251,4 +254,5 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
             });
         });
     </script>
-</body></html>
+</body>
+</html>

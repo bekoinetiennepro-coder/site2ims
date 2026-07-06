@@ -8,6 +8,8 @@ use App\Http\Controllers\FormationController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RendezVousController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AccueilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +17,8 @@ use App\Http\Controllers\RendezVousController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
-    return view('pages.accueil');
-});
+Route::get('/', [AccueilController::class, 'index'])
+    ->name('accueil');
 
 Route::get('/formation', [FormationController::class, 'showPublic'])
     ->name('formations');
@@ -125,6 +126,11 @@ Route::middleware([
     Route::resource(
         'equipes',
         EquipeController::class
+    );
+
+    Route::resource(
+        'services',
+        ServiceController::class
     );
 
 });

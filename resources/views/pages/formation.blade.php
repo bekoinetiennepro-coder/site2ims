@@ -102,7 +102,7 @@
                             </span>
 
                             <span>
-                                {{ $formation->duree }} jours
+                                {{ $formation->duree }} heures
                             </span>
 
                         </div>

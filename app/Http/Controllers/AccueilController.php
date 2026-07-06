@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Accueil;
 use Illuminate\Http\Request;
-
+use App\Models\Service;
 class AccueilController extends Controller
 {
     /**
@@ -12,7 +12,14 @@ class AccueilController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::where('actif',1)
+            ->orderBy('ordre')
+            ->get();
+
+        return view(
+            'pages.accueil',
+            compact('services')
+        );
     }
 
     /**

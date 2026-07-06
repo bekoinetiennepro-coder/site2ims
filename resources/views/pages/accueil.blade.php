@@ -21,12 +21,22 @@
                     Expertise pointue en conseil, audit et solutions de pointe pour moderniser votre système d'information et sécuriser vos données critiques.
                 </p>
                 <div class="flex flex-wrap gap-md">
-                     <button class="bg-primary-container text-on-primary px-lg py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
-                        Nos Services <span class="material-symbols-outlined">arrow_forward</span>
-                    </button>
-                    <button class="border border-outline text-primary px-lg py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all">
+                    <a href="#services"
+                        class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-lg py-4 rounded-lg font-label-md text-label-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 active:scale-95">
+
+                            Nos Services
+
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+
+                    </a>
+                    <a href="{{ url('/propos#equipe') }}"
+                    class="inline-flex items-center justify-center border border-outline text-primary px-lg py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low hover:shadow-lg transition-all duration-300 active:scale-95">
+
                         Consulter un expert
-                    </button>
+
+                    </a>
                 </div>
             </div>
             <div class="relative hidden md:block">
@@ -59,66 +69,73 @@
         </div>
     </section>
     <!-- Services Grid Section -->
-    <section class="py-xl bg-surface-container-lowest">
-        <div class="max-w-screen-2xl mx-auto px-margin-desktop">
-        <div class="mb-lg text-center">
-        <h2 class="font-headline-md text-headline-md text-primary mb-sm">Solutions Digitales Intégrées</h2>
-        <p class="font-body-md text-body-md text-secondary max-w-2xl mx-auto">
-                                Une approche holistique pour répondre aux défis technologiques les plus complexes de votre entreprise.
-                            </p>
+<section id="services" class="py-24 bg-slate-50">
+
+    <div class="max-w-screen-2xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">
+
+                Solutions Digitales Intégrées
+
+            </h2>
+
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+
+                Une approche holistique pour répondre aux défis technologiques les plus complexes de votre entreprise.
+
+            </p>
+
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <!-- Service Card 1 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">quick_reference_all</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            @foreach($services as $service)
+
+            <div
+                class="bg-secondary-container rounded-2xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden">
+
+                <div class="p-8">
+
+                    <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center shadow mb-6">
+
+                        <span class="material-symbols-outlined text-4xl text-blue-700">
+
+                            {{ $service->icone }}
+
+                        </span>
+
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">
+
+                        {{ $service->titre }}
+
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+
+                        {{ $service->description }}
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">
+
+                </div>
+
+            </div>
+
+            @endforeach
+
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Conseil IT</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Accompagnement stratégique pour aligner votre technologie sur vos objectifs business.</p>
-        </div>
-        <!-- Service Card 2 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">security</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Audit SI</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Évaluation rigoureuse de la sécurité, de la performance et de la conformité de vos infrastructures.</p>
-        </div>
-        <!-- Service Card 3 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">code</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Développement</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Création d'applications sur mesure robustes et évolutives pour vos besoins spécifiques.</p>
-        </div>
-        <!-- Service Card 4 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">school</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Formation</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Montée en compétences de vos équipes sur les dernières technologies et méthodologies.</p>
-        </div>
-        <!-- Service Card 5 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">database</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Bases de données</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Optimisation, maintenance et sécurisation de vos environnements de données critiques.</p>
-        </div>
-        <!-- Service Card 6 -->
-        <div class="group bg-surface-container p-lg rounded-xl hover:bg-primary-container transition-all duration-300 cursor-pointer">
-        <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center mb-md group-hover:bg-on-primary-container transition-colors">
-        <span class="material-symbols-outlined text-primary group-hover:text-surface">cloud_queue</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary mb-base group-hover:text-on-primary">Cloud Computing</h3>
-        <p class="font-body-md text-body-md text-secondary group-hover:text-on-primary-container">Migration et gestion de vos services vers des infrastructures cloud agiles et sécurisées.</p>
-        </div>
-        </div>
-        </div>
-    </section>
+
+    </div>
+
+</section>
     <!-- CTA Section -->
     <section class="py-xl">
         <div class="max-w-screen-2xl mx-auto px-margin-desktop">

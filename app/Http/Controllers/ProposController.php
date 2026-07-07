@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Propos;
 use Illuminate\Http\Request;
 use App\Models\Equipe;
-
+use App\Models\Reference;
 class ProposController extends Controller
 {
 
@@ -20,9 +20,14 @@ class ProposController extends Controller
         ->orderBy('ordre')
         ->get();
 
+       
+
+        $references = Reference::orderBy('ordre')
+        ->get();
+
         return view(
             'pages.propos',
-            compact('equipes')
+            compact('equipes', 'references')
         );
     }
     /**

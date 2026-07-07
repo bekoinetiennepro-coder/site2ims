@@ -84,46 +84,33 @@
 
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     @foreach($equipes as $membre)
 
-                        <div class="group">
+                        <div class="group max-w-[260px] mx-auto text-center">
 
-                            <div class="relative overflow-hidden rounded-xl mb-md h-[350px]">
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg h-[300px]">
 
                                 <img
                                     src="{{ asset('storage/'.$membre->photo) }}"
                                     alt="{{ $membre->nom }}"
                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
 
-                                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
 
-                                    <div class="flex gap-sm text-white">
+                                    <div class="flex gap-3 text-white">
 
                                         @if($membre->linkedin)
-
-                                            <a href="{{ $membre->linkedin }}"
-                                            target="_blank">
-
-                                                <span class="material-symbols-outlined">
-                                                    link
-                                                </span>
-
+                                            <a href="{{ $membre->linkedin }}" target="_blank">
+                                                <span class="material-symbols-outlined">link</span>
                                             </a>
-
                                         @endif
 
                                         @if($membre->email)
-
                                             <a href="mailto:{{ $membre->email }}">
-
-                                                <span class="material-symbols-outlined">
-                                                    mail
-                                                </span>
-
+                                                <span class="material-symbols-outlined">mail</span>
                                             </a>
-
                                         @endif
 
                                     </div>
@@ -132,11 +119,11 @@
 
                             </div>
 
-                            <h4 class="font-headline-sm text-headline-sm text-primary">
+                            <h4 class="mt-4 text-lg font-bold text-slate-800">
                                 {{ $membre->nom }}
                             </h4>
 
-                            <p class="font-label-md text-label-md text-secondary">
+                            <p class="text-blue-600 font-medium">
                                 {{ $membre->poste }}
                             </p>
 
@@ -184,5 +171,101 @@
                 </div>
             </div>
         </section>
+
+        <section class="py-24 bg-white" id="partenaires">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center mb-14">
+
+                    <h2 class="text-4xl font-bold text-slate-800">
+
+                        Ils nous font confiance
+
+                    </h2>
+
+                    <p class="mt-3 text-gray-500">
+
+                        Nos partenaires stratégiques
+
+                    </p>
+
+                </div>
+
+                <div class="swiper partenairesSwiper">
+
+                    <div class="swiper-wrapper">
+
+                        @foreach($references as $reference)
+
+                        <div class="swiper-slide">
+
+                            
+                            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 h-40 flex items-center justify-center p-8 transition-all duration-300">
+
+                                <img
+                                    src="{{ asset('storage/'.$reference->logo) }}"
+                                    class="max-h-20 max-w-full object-contain transition-transform duration-300 hover:scale-110">
+
+                            </div>
+
+                        
+                        </div>
+
+                        @endforeach
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+@push('scripts')
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    new Swiper('.partenairesSwiper', {
+
+        loop: true,
+
+        speed: 1000,
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+
+        spaceBetween: 30,
+
+        breakpoints: {
+
+            320: {
+                slidesPerView: 2,
+            },
+
+            768: {
+                slidesPerView: 4,
+            },
+
+            1024: {
+                slidesPerView: 5,
+            },
+
+            1400: {
+                slidesPerView: 6,
+            }
+
+        }
+
+    });
+
+});
+
+</script>
+
+@endpush
 </main>
 @endsection

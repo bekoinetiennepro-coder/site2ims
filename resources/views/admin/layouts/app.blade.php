@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-
-
+    
 <script src="https://cdn.tailwindcss.com">
 
 </script>
@@ -65,6 +64,16 @@
             <a href="{{ route('admin.services.index') }}">
                 🛠️ Services
             </a>
+        </li>
+        <li>
+
+            <a href="{{ route('admin.references.index') }}">
+
+                🤝Partenaires
+
+            </a>
+
+        </li>
     </ul>
 
 </aside>

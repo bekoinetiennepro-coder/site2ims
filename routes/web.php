@@ -1,5 +1,6 @@
 <?php
-
+use App\Models\Equipe;
+use App\Models\Reference;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
@@ -10,7 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RendezVousController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AccueilController;
-
+use App\Http\Controllers\ReferenceController;
 /*
 |--------------------------------------------------------------------------
 | SITE PUBLIC
@@ -30,7 +31,7 @@ Route::get('/service', function () {
     return view('pages.service');
 });
 
-use App\Models\Equipe;
+
 
 Route::get('/propos', function () {
 
@@ -38,9 +39,12 @@ Route::get('/propos', function () {
         ->orderBy('ordre')
         ->get();
 
+   
+    $references = Reference::all();
+
     return view(
         'pages.propos',
-        compact('equipes')
+        compact('equipes', 'references')
     );
 
 });
@@ -131,6 +135,11 @@ Route::middleware([
     Route::resource(
         'services',
         ServiceController::class
+    );
+
+    Route::resource(
+        'references',
+        ReferenceController::class
     );
 
 });

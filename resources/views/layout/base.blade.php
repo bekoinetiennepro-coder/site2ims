@@ -6,6 +6,10 @@
 {{-- <title>2IMS | Solutions IT &amp; Infrastructure</title> --}}
 <title>@yield('title')</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -135,6 +139,8 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
     this.form.submit();
 });
 </script> --}}
+
+
 <body class="bg-background text-on-surface">
 <!-- Navigation Shell -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm">
@@ -171,6 +177,9 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 
 
     @yield('content')
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    @stack('scripts')
 
 
     <footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-on-primary">

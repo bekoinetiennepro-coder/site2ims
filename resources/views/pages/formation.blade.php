@@ -156,8 +156,12 @@
                         Nous accompagnons vos équipes avec des formations personnalisées, adaptées à votre stack technique et à vos enjeux métiers spécifiques.
                     </p>
 <div class="flex flex-wrap gap-md">
-<button class="bg-on-primary text-primary px-8 py-3 rounded-lg font-label-md font-bold hover:bg-primary-fixed transition-colors">Discuter avec un expert</button>
-<button class="border border-on-primary/30 text-on-primary px-8 py-3 rounded-lg font-label-md hover:bg-on-primary/10 transition-colors">Voir nos références</button>
+    <a href="{{ url('/propos#equipe') }}"
+        class="bg-on-primary text-primary px-8 py-3 rounded-lg font-label-md font-bold hover:bg-primary-fixed transition-colors">
+            Discuter avec un expert
+
+    </a>   
+<a href="{{ url('/propos#partenaires') }}" class="border border-on-primary/30 text-on-primary px-8 py-3 rounded-lg font-label-md hover:bg-on-primary/10 transition-colors">Voir nos partenaires</a>
 </div>
 </div>
 <div class="w-full md:w-1/2 bg-surface-container-high/20 p-lg md:p-xl flex items-center justify-center relative z-10">

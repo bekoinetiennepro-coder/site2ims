@@ -12,10 +12,29 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
+           $table->id();
+
+            $table->string('nom');
+
+            $table->string('entreprise')->nullable();
+
+            $table->string('telephone')->nullable();
+
+            $table->string('email');
+
+            $table->string('service')->nullable();
+
+            $table->longText('message');
+
+            $table->enum('statut',[
+                'Non lu',
+                'Lu',
+                'Traité'
+            ])->default('Non lu');
+
             $table->timestamps();
-        });
-    }
+                });
+            }
 
     /**
      * Reverse the migrations.

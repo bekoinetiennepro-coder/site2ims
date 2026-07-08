@@ -3,63 +3,69 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Parametre;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+use App\Models\Service;
 class ContactController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Afficher la page contact
      */
+  
+
     public function index()
     {
-        //
+        $parametre = Parametre::first();
+
+        $services = Service::where('actif',1)
+            ->orderBy('ordre')
+            ->get();
+
+        return view('pages.contact', compact(
+            'parametre',
+            'services'
+        ));
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Enregistrer le message
      */
     public function store(Request $request)
     {
-        //
-    }
+        $data = $request->validate([
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
+            'nom'         => 'required|string|max:255',
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
+            'entreprise'  => 'nullable|string|max:255',
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Contact $contact)
-    {
-        //
-    }
+            'telephone'   => 'nullable|string|max:30',
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+            'email'       => 'required|email',
+
+            'service'     => 'nullable|string|max:255',
+
+            'message'     => 'required|string',
+
+        ]);
+
+        $contact = Contact::create($data);
+
+        /*
+        |--------------------------------------------------------------------------
+        | Envoi du mail
+        |--------------------------------------------------------------------------
+        */
+
+        $destinataire = Parametre::first()?->email ?? env('MAIL_FROM_ADDRESS');
+
+        Mail::to($destinataire)
+            ->send(new ContactMail($contact));
+
+        return back()->with(
+            'success',
+            'Votre message a été envoyé avec succès.'
+        );
     }
 }

@@ -12,6 +12,10 @@ use App\Http\Controllers\RendezVousController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ReferenceController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\Admin\ContactController as AdminContactController;
+
 /*
 |--------------------------------------------------------------------------
 | SITE PUBLIC
@@ -49,9 +53,17 @@ Route::get('/propos', function () {
 
 });
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+// Route::get('/contact', function () {
+//     return view('pages.contact');
+// });
+
+Route::get('/contact',[ContactController::class,'index'])
+    ->name('contact');
+
+Route::post('/contact',[ContactController::class,'store'])
+    ->name('contact.store');
+
+
 
 Route::post('/inscriptions',
     [InscriptionController::class, 'store']
@@ -142,7 +154,33 @@ Route::middleware([
         ReferenceController::class
     );
 
-});
+
+    Route::resource(
+            'contacts',
+            AdminContactController::class
+        )->only([
+            'index',
+            'show',
+            'destroy'
+        ]);
+
+    // Route::resource('parametres',ParametreController::class)
+    //     ->only(['edit','update']);
+
+    Route::get('/parametres', [ParametreController::class,'index'])
+        ->name('parametres.index');
+
+    Route::get('/parametres/edit', [ParametreController::class,'edit'])
+        ->name('parametres.edit');
+
+    Route::put('/parametres', [ParametreController::class,'update'])
+        ->name('parametres.update');
+
+        
+
+    });
+
+    
 
 
 /*

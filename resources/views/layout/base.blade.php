@@ -181,49 +181,262 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 
     @stack('scripts')
 
+    <footer class="w-full bg-primary text-on-primary">
 
-    <footer class="w-full py-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-on-primary">
-        <div class="md:col-span-1">
-            <div class="flex items-center gap-xs mb-md">
-                <img alt="2IMS Footer Logo" class="h-8 w-auto brightness-200" src="{{ asset('images/logo.jpg') }}"/>
-                <span class="font-headline-sm text-headline-sm font-bold">2IMS</span>
-            </div>
-            <p class="font-body-md text-body-md opacity-80">
-                Votre partenaire de confiance pour une infrastructure informatique résiliente et innovante.
-             </p>
-        </div>
+
+    <!-- Footer Content -->
+    <div class="py-xl px-margin-mobile md:px-margin-desktop 
+                grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-xl">
+
+
+        <!-- Logo + Présentation -->
         <div>
-            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Expertise</h4>
-            <ul class="space-y-sm font-body-md text-body-md">
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Audit &amp; Conseil</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cybersécurité</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Cloud &amp; DevOps</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Base de données</li>
+
+
+            <a href="{{ url('/') }}" 
+               class="flex items-center gap-xs mb-md">
+
+                <img 
+                    src="{{ asset('images/logo.jpg') }}"
+                    alt="2IMS Logo"
+                    class="h-10 w-auto brightness-200"
+                >
+
+
+            </a>
+
+
+            <p class="font-body-md opacity-80 leading-relaxed">
+                Votre partenaire de confiance pour vos projets informatiques,
+                vos infrastructures digitales et vos solutions métiers.
+            </p>
+
+
+        </div>
+
+
+
+
+        <!-- Expertise -->
+        <div>
+
+
+            <h4 class="font-label-md font-semibold mb-md uppercase tracking-wider">
+                Expertise
+            </h4>
+
+
+            <ul class="space-y-sm">
+
+
+                <li>
+                    <a href="{{ url('/#services') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Développement logiciel
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{{ url('/#services') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Cybersécurité
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{{ url('/#services') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Cloud & DevOps
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{{ url('/#services') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Audit & Conseil
+                    </a>
+                </li>
+
+
             </ul>
+
+
         </div>
+
+
+
+
+
+        <!-- Navigation -->
         <div>
-            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Ressources</h4>
-            <ul class="space-y-sm font-body-md text-body-md">
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Support Technique</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Plan du site</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Confidentialité</li>
-            <li class="cursor-pointer hover:underline opacity-80 hover:opacity-100">Mentions Légales</li>
+
+
+            <h4 class="font-label-md font-semibold mb-md uppercase tracking-wider">
+                Navigation
+            </h4>
+
+
+            <ul class="space-y-sm">
+
+
+                <li>
+                    <a href="{{ url('/') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Accueil
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="{{ url('/propos') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        À propos
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="{{ url('/#services') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Services
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="{{ url('/contact') }}"
+                       class="opacity-80 hover:opacity-100 hover:underline transition">
+                        Contact
+                    </a>
+                </li>
+
+
             </ul>
+
+
         </div>
+
+
+
+
+
+        <!-- Contact / Newsletter -->
         <div>
-            <h4 class="font-label-md text-label-md font-semibold mb-md uppercase tracking-wider">Newsletter</h4>
-            <p class="font-body-md text-body-md mb-md opacity-80">Restez informé de nos actualités.</p>
-            <div class="flex">
-                <input class="bg-on-primary/10 border-none rounded-l-lg p-2 text-on-primary placeholder:text-on-primary/50 focus:ring-1 focus:ring-on-primary w-full" placeholder="Votre email" type="email"/>
-                <button class="bg-surface text-primary p-2 rounded-r-lg hover:bg-primary-fixed transition-colors">
-                    <span class="material-symbols-outlined">send</span>
-                </button>
-            </div>
+
+
+            <h4 class="font-label-md font-semibold mb-md uppercase tracking-wider">
+                Contact
+            </h4>
+
+
+            <ul class="space-y-sm opacity-80">
+
+
+                <li class="flex items-center gap-sm">
+
+                    <span class="material-symbols-outlined text-sm">
+                        call
+                    </span>
+
+                    +225 07 07 96 38 39
+
+                </li>
+
+
+
+                <li class="flex items-center gap-sm">
+
+                    <span class="material-symbols-outlined text-sm">
+                        mail
+                    </span>
+
+                    contact@2ims.ci
+
+                </li>
+
+
+
+                <li class="flex items-start gap-sm">
+
+                    <span class="material-symbols-outlined text-sm">
+                        location_on
+                    </span>
+
+                    Abidjan, Côte d'Ivoire
+
+                </li>
+
+
+            </ul>
+
+
+
+            <a href="{{ url('/contact') }}"
+               class="inline-flex mt-lg bg-white text-primary 
+                      px-lg py-sm rounded-lg
+                      hover:bg-secondary transition">
+
+                Nous contacter
+
+            </a>
+
+
         </div>
-        <div class="md:col-span-4 pt-lg mt-lg border-t border-on-primary/10 text-center font-body-md text-body-md opacity-60">
-                © 2024 2IMS. Tous droits réservés. Expertise IT &amp; Solutions Digitales.
+
+
+
+    </div>
+
+
+
+
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-white/10 
+                py-md px-margin-mobile md:px-margin-desktop
+                flex flex-col md:flex-row 
+                justify-between items-center gap-md">
+
+
+        <p class="text-sm opacity-60">
+
+            © {{ date('Y') }} 2IMS.
+            Tous droits réservés.
+
+        </p>
+
+
+
+        <div class="flex gap-md text-sm opacity-70">
+
+
+            <a href="#"
+               class="hover:underline">
+                Politique de confidentialité
+            </a>
+
+
+            <a href="#"
+               class="hover:underline">
+                Mentions légales
+            </a>
+
+
         </div>
-    </footer>
+
+
+    </div>
+
+
+</footer>
+
+    
     <script>
         // Micro-interaction for cards
         document.querySelectorAll('.group').forEach(card => {

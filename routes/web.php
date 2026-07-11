@@ -15,7 +15,7 @@ use App\Http\Controllers\ReferenceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\Admin\ContactController as AdminContactController;
-
+use App\Http\Controllers\CategorieController;
 /*
 |--------------------------------------------------------------------------
 | SITE PUBLIC
@@ -175,6 +175,11 @@ Route::middleware([
 
     Route::put('/parametres', [ParametreController::class,'update'])
         ->name('parametres.update');
+
+    Route::resource(
+        'categories',
+        CategorieController::class
+    );
 
         
 

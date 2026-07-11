@@ -70,15 +70,27 @@
                 <!-- Catégorie -->
                 <div>
 
-                    <label class="block mb-2 font-semibold text-gray-700">
-                        Catégorie
+                    <label class="block mb-2">
+
+                    Catégorie
+
                     </label>
 
-                    <input type="text"
-                           name="categorie"
-                           value="{{ old('categorie') }}"
-                           placeholder="Développement Web"
-                           class="w-full rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500 px-4 py-3">
+                    <select
+                    name="categorie_id"
+                    class="w-full border rounded-lg px-4 py-3">
+
+                    @foreach($categories as $categorie)
+
+                    <option value="{{ $categorie->id }}">
+
+                    {{ $categorie->nom }}
+
+                    </option>
+
+                    @endforeach
+
+                    </select>
 
                 </div>
 
@@ -86,7 +98,7 @@
                 <div>
 
                     <label class="block mb-2 font-semibold text-gray-700">
-                        Durée (jours)
+                        Durée (Heures)
                     </label>
 
                     <input type="number"

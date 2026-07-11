@@ -25,32 +25,32 @@
 
                 <div class="flex flex-wrap gap-sm">
 
-                    <a href="{{ route('formations') }}"
-                    class="px-6 py-2 rounded-full border {{ !request('categorie') ? 'bg-primary text-white border-primary' : 'border-outline' }}">
-                        Toutes
-                    </a>
+    <a href="{{ route('formations') }}"
+       class="px-6 py-2 rounded-full border transition
+       {{ !request('categorie') ? 'bg-primary text-white border-primary' : 'border-outline hover:bg-gray-100' }}">
 
-                    <a href="{{ route('formations',['categorie'=>'Cloud']) }}"
-                    class="px-6 py-2 rounded-full border {{ request('categorie')=='Cloud' ? 'bg-primary text-white border-primary' : 'border-outline' }}">
-                        Cloud
-                    </a>
+        Toutes
 
-                    <a href="{{ route('formations',['categorie'=>'Cyber']) }}"
-                    class="px-6 py-2 rounded-full border {{ request('categorie')=='Cyber' ? 'bg-primary text-white border-primary' : 'border-outline' }}">
-                        Cyber
-                    </a>
+    </a>
 
-                    <a href="{{ route('formations',['categorie'=>'Dev']) }}"
-                    class="px-6 py-2 rounded-full border {{ request('categorie')=='Dev' ? 'bg-primary text-white border-primary' : 'border-outline' }}">
-                        Dev
-                    </a>
+    @foreach($categories as $categorie)
 
-                    <a href="{{ route('formations',['categorie'=>'Compta']) }}"
-                    class="px-6 py-2 rounded-full border {{ request('categorie')=='Compta' ? 'bg-primary text-white border-primary' : 'border-outline' }}">
-                        Compta
-                    </a>
+        <a href="{{ route('formations',[
+                'categorie'=>$categorie->slug,
+                'search'=>request('search')
+            ]) }}"
+           class="px-6 py-2 rounded-full border transition
+           {{ request('categorie') == $categorie->slug
+                ? 'bg-primary text-white border-primary'
+                : 'border-outline hover:bg-gray-100' }}">
 
-                </div>
+            {{ $categorie->nom }}
+
+        </a>
+
+    @endforeach
+
+</div>
 
                 <div class="relative w-full md:w-80">
 
@@ -98,7 +98,7 @@
                         <div class="flex items-center gap-2 mb-xs">
 
                             <span class="text-on-secondary-container bg-secondary-container px-2 py-1 rounded">
-                                {{ $formation->categorie }}
+                                {{ $formation->categorie->nom }}
                             </span>
 
                             <span>

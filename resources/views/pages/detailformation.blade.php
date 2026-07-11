@@ -19,7 +19,7 @@
         <div class="text-white max-w-3xl">
 
             <span class="inline-block px-4 py-2 bg-primary rounded-full mb-4">
-                {{ $formation->categorie }}
+                {{ $formation->categorie_id ? $formation->categorie->nom : 'Autres' }}
             </span>
 
             <h1 class="text-5xl font-bold mb-4">
@@ -109,7 +109,7 @@
 
                 <li class="flex justify-between">
                     <span>Catégorie</span>
-                    <strong>{{ $formation->categorie }}</strong>
+                    <strong>{{ $formation->categorie_id ? $formation->categorie->nom : 'Autres' }}</strong>
                 </li>
 
                 <li class="flex justify-between">

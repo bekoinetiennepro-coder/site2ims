@@ -74,10 +74,21 @@
                         Catégorie
                     </label>
 
-                    <input type="text"
+                    {{-- <input type="text"
                            name="categorie"
                            value="{{ old('categorie', $formation->categorie) }}"
-                           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"> --}}
+                    <select
+                        name="categorie_id"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">Sélectionnez une catégorie</option>
+                        @foreach ($categories as $categorie)
+                            <option value="{{ $categorie->id }}"
+                                    {{ old('categorie_id', $formation->categorie_id) == $categorie->id ? 'selected' : '' }}>
+                                {{ $categorie->nom }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <!-- Prix -->
@@ -95,7 +106,7 @@
                 <!-- Durée -->
                 <div>
                     <label class="block mb-2 font-medium text-gray-700">
-                        Durée (jours)
+                        Durée (Heures)
                     </label>
 
                     <input type="number"

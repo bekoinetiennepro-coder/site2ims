@@ -10,7 +10,7 @@ class Formation extends Model
 
    protected $fillable = [
         'titre',
-        'categorie',
+        'categorie_id',
         'description',
         'programme',
         'image',
@@ -24,5 +24,10 @@ class Formation extends Model
     public function inscriptions()
     {
         return $this->hasMany(Inscription::class);
+    }
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class);
     }
 }

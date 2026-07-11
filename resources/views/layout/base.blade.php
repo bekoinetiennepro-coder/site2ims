@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 {{-- <title>2IMS | Solutions IT &amp; Infrastructure</title> --}}
 <title>@yield('title')</title>
+<link rel="icon" type="image/jpg" href="{{ asset('images/logo.jpg') }}">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link
          rel="stylesheet"
@@ -143,36 +144,98 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
 
 <body class="bg-background text-on-surface">
 <!-- Navigation Shell -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm">
-        <div class="max-w-screen-2xl mx-auto px-margin-desktop flex justify-between items-center h-20">
-            <div class="flex items-center gap-base">
-                <img alt="2IMS Logo" class="h-10 w-auto" src="{{ asset('images/logo.jpg') }}"/>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
 
-            </div>
-            <div class="hidden md:flex gap-lg">
-                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/">ACCUEIL</a>
-                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/propos">À PROPOS</a>
-                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95"
-                     href="/#services">
-                    SERVICES
-                </a>
-                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/formation">FORMATIONS</a>
-                <a class="font-label-md text-label-md text-white border-b-2 border-primary pb-1 cursor-pointer transition-all active:scale-95" href="/contact">CONTACT</a>
-            </div>
+    <div class="max-w-screen-2xl mx-auto px-margin-desktop flex justify-between items-center h-20">
 
-            <a href="{{ route('rendezvous.create') }}"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-700 text-white font-medium hover:bg-blue-700 transition">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+            <img
+                src="{{ asset('images/logo.jpg') }}"
+                alt="2IMS"
+                class="h-16 w-auto hover:scale-105 transition duration-300">
+        </a>
 
-                <span class="material-symbols-outlined text-[20px]">
-                    event
-                </span>
+        <!-- Menu -->
+        <div class="hidden md:flex items-center gap-8">
 
-                Prendre rendez-vous
+            <a href="/"
+                class="relative font-semibold uppercase tracking-wide transition duration-300
+                {{ request()->is('/') ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700' }}
+                after:absolute after:left-0 after:-bottom-2 after:h-[3px] after:bg-blue-700 after:rounded-full
+                after:transition-all after:duration-300
+                {{ request()->is('/') ? 'after:w-full' : 'after:w-0 hover:after:w-full' }}">
+
+                Accueil
+
+            </a>
+
+            <a href="/propos"
+                class="relative font-semibold uppercase tracking-wide transition duration-300
+                {{ request()->is('propos') ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700' }}
+                after:absolute after:left-0 after:-bottom-2 after:h-[3px] after:bg-blue-700 after:rounded-full
+                after:transition-all after:duration-300
+                {{ request()->is('propos') ? 'after:w-full' : 'after:w-0 hover:after:w-full' }}">
+
+                À propos
+
+            </a>
+
+            <a href="/#services"
+                class="relative font-semibold uppercase tracking-wide text-gray-700 hover:text-blue-700 transition duration-300
+                after:absolute after:left-0 after:-bottom-2 after:h-[3px] after:bg-blue-700 after:rounded-full
+                after:w-0 hover:after:w-full after:transition-all after:duration-300">
+
+                Services
+
+            </a>
+
+            <a href="/formation"
+                class="relative font-semibold uppercase tracking-wide transition duration-300
+                {{ request()->is('formation*') ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700' }}
+                after:absolute after:left-0 after:-bottom-2 after:h-[3px] after:bg-blue-700 after:rounded-full
+                after:transition-all after:duration-300
+                {{ request()->is('formation*') ? 'after:w-full' : 'after:w-0 hover:after:w-full' }}">
+
+                Formations
+
+            </a>
+
+            <a href="/contact"
+                class="relative font-semibold uppercase tracking-wide transition duration-300
+                {{ request()->is('contact') ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700' }}
+                after:absolute after:left-0 after:-bottom-2 after:h-[3px] after:bg-blue-700 after:rounded-full
+                after:transition-all after:duration-300
+                {{ request()->is('contact') ? 'after:w-full' : 'after:w-0 hover:after:w-full' }}">
+
+                Contact
 
             </a>
 
         </div>
-    </nav>
+
+        <!-- Bouton -->
+        <a href="{{ route('rendezvous.create') }}"
+            class="hidden lg:inline-flex items-center gap-2 px-6 py-3 rounded-xl
+            bg-gradient-to-r from-blue-700 to-indigo-700
+            text-white font-semibold
+            shadow-lg
+            hover:shadow-2xl
+            hover:-translate-y-1
+            hover:scale-105
+            transition-all duration-300">
+
+            <span class="material-symbols-outlined">
+                event
+            </span>
+
+            Prendre rendez-vous
+
+        </a>
+
+    </div>
+
+</nav>
 
 
 
@@ -193,17 +256,7 @@ document.querySelector('input[name="search"]').addEventListener('keyup', functio
         <div>
 
 
-            <a href="{{ url('/') }}" 
-               class="flex items-center gap-xs mb-md">
-
-                <img 
-                    src="{{ asset('images/logo.jpg') }}"
-                    alt="2IMS Logo"
-                    class="h-10 w-auto brightness-200"
-                >
-
-
-            </a>
+          
 
 
             <p class="font-body-md opacity-80 leading-relaxed">

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 
     <title>@yield('title')</title>
-
+    <link rel="icon" type="image/jpg" href="{{ asset('images/logo.jpg') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -325,6 +325,21 @@
 
                 Paramètres
 
+
+            </a>
+
+
+            <a href="{{ route('admin.categories.index') }}"
+               class="flex items-center gap-3 px-4 py-3 rounded-xl
+               hover:bg-blue-600 transition">
+
+
+                <span class="material-symbols-outlined">
+                    category
+                </span>
+
+
+                Catégories
 
             </a>
 

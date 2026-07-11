@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Categorie;
 use App\Models\Formation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -19,24 +19,42 @@ class FormationController extends Controller
 
     public function showPublic(Request $request)
     {
-        $query = Formation::query();
+        $query = Formation::with('categorie');
 
-        // Filtre catégorie
-        if ($request->filled('categorie') && $request->categorie != 'Toutes') {
-            $query->where('categorie', $request->categorie);
+        // Filtre par catégorie
+        if ($request->filled('categorie')) {
+
+            $query->whereHas('categorie', function ($q) use ($request) {
+
+                $q->where('slug', $request->categorie);
+
+            });
+
         }
 
         // Recherche
         if ($request->filled('search')) {
+
             $query->where(function ($q) use ($request) {
+
                 $q->where('titre', 'like', '%' . $request->search . '%')
                 ->orWhere('description', 'like', '%' . $request->search . '%');
+
             });
+
         }
 
         $formations = $query->latest()->paginate(9);
 
-        return view('pages.formation', compact('formations'));
+        // Toutes les catégories actives
+        $categories = Categorie::where('actif', true)
+                        ->orderBy('nom')
+                        ->get();
+
+        return view(
+            'pages.formation',
+            compact('formations', 'categories')
+        );
     }
 
 
@@ -65,8 +83,10 @@ class FormationController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.formations.create');
+        $categories = Categorie::where('actif',1)
+                    ->orderBy('nom')
+                    ->get();
+        return view('admin.formations.create', compact('categories'));
     }
 
     /**
@@ -77,7 +97,7 @@ class FormationController extends Controller
     {
            $request->validate([
                 'titre' => 'required',
-                'categorie' => 'required',
+                'categorie_id' => 'required',
                 'description' => 'required',
                 'programme' => 'nullable',
                 'prix' => 'required',
@@ -101,7 +121,7 @@ class FormationController extends Controller
             $formations['phare'] = $request->has('phare');
 
             $formations -> titre = $request ->input('titre');
-            $formations -> categorie = $request-> input('categorie');
+            $formations -> categorie_id = $request-> input('categorie_id');
             $formations -> description = $request -> input('description');
             $formations->  programme = $request-> input('programme');
             $formations -> prix = $request -> input('prix');
@@ -110,8 +130,6 @@ class FormationController extends Controller
 
             //$formations -> save();
             $result = $formations->save();
-
-            dd($result);
              
 
             return redirect()
@@ -132,7 +150,10 @@ class FormationController extends Controller
      */
     public function edit(Formation $formation)
     {
-         return view('admin.formations.edit', compact('formation'));
+        $categories = Categorie::where('actif',1)
+                    ->orderBy('nom')
+                    ->get();
+        return view('admin.formations.edit', compact('formation', 'categories'));
     }
 
     /**
@@ -142,7 +163,7 @@ class FormationController extends Controller
     {
         $data = $request->validate([
             'titre' => 'required',
-            'categorie' => 'required',
+            'categorie_id' => 'required',
             'description' => 'required',
             'programme' => 'nullable',
             'prix' => 'required',
